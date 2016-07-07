@@ -1,0 +1,32 @@
+{
+  "name": "katia",
+  "author": "Oliver Turner",
+  "description": "minimal implementation of a flex-based responsive layout",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/oliverturner/codebar-katia-refactor/issues"
+  },
+  "homepage": "https://oliverturner.github.com/codebar-katia-refactor",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverturner/codebar-katia-refactor.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
+    "scss": "node-sass -r src/styles -o dist/css --output-style expanded",
+    "scss:watch": "npm run scss -- -w",
+    "browsersync": "browser-sync start --server 'dist' --files 'dist'",
+    "prestart": "run-s scss",
+    "start": "run-p scss:watch browsersync"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gh-pages": "^0.11.0",
+    "node-sass": "^3.8.0",
+    "npm-run-all": "^2.3.0"
+  }
+}
