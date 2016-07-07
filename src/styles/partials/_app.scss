@@ -1,0 +1,33 @@
+.app {
+  display:        flex;
+  flex-direction: column;
+
+  height:         100vh;
+
+  @include break {
+    flex-direction: row;
+  }
+}
+
+.wrap {
+  flex:       1;
+
+  display:    flex;
+
+  overflow-y: scroll;
+  background: palegoldenrod;
+}
+
+.wrap__inner {
+  flex:                1;
+
+  display:             flex;
+  flex-direction:      column;
+  justify-content:     center;
+
+  padding:             20px;
+  background-position: center;
+  background-repeat:   no-repeat, repeat, no-repeat;
+  background-size:     100%, 4px 4px, cover;
+  color:               white;
+}
