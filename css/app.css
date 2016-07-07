@@ -1,0 +1,157 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+a {
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .app {
+    flex-direction: row;
+  }
+}
+
+.wrap {
+  flex: 1;
+  display: flex;
+  overflow-y: scroll;
+  background: palegoldenrod;
+}
+
+.wrap__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-position: center;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: 100%, 4px 4px, cover;
+  color: white;
+}
+
+.navmain {
+  display: flex;
+  background: turquoise;
+}
+
+@media (min-width: 768px) {
+  .navmain {
+    flex-direction: column;
+  }
+}
+
+.navmain__links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  background: orange;
+}
+
+@media (min-width: 768px) {
+  .navmain__links {
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+  }
+  .navmain__links li:not(:first-child) {
+    margin: 15px 0 0;
+  }
+}
+
+.navmain__link {
+  overflow: hidden;
+  display: block;
+  padding: 5px 10px;
+  background: black;
+  color: white;
+}
+
+.navmain__link:hover {
+  background: white;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .navmain__link {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid black;
+    background: transparent;
+  }
+  .navmain__link:before {
+    content: '×';
+    display: block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: black;
+  }
+}
+
+.intro {
+  display: none;
+  background-image: linear-gradient(rgba(70, 130, 180, 0.5), rgba(0, 0, 0, 0.65)), url("../images/silkscreen.svg"), url("../images/pier-small.jpg");
+}
+
+@media (min-width: 768px) {
+  .intro {
+    display: flex;
+  }
+}
+
+.intro__content {
+  margin: auto;
+}
+
+.title {
+  margin: 10px 0;
+  font-size: 48px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.body {
+  background-image: linear-gradient(rgba(102, 205, 170, 0.5), rgba(0, 0, 0, 0.65)), url("../images/silkscreen.svg"), url("../images/rain-small.jpg");
+}
+
+.body__content {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid currentColor;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.body__title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid currentColor;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .body__title {
+    font-size: 36px;
+  }
+}
